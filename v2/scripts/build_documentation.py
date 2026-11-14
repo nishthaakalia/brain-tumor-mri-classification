@@ -1354,29 +1354,6 @@ paper for comparison.
 print("documentation written:", sorted(p.name for p in OUT.glob("*.md")))
 
 # ================================================================ top-level README
-THESIS = [
-    ("Quantum and hybrid quantum machine learning", [
-        ("hybrid-vqc-wind-speed-forecasting", "hybrid variational quantum circuit (Conv1D-LSTM + VQC) for wind speed forecasting"),
-        ("cbma-tn-vqc-wind-green-hydrogen", "reimplementation of CBMA-TN-VQC (CNN-BiLSTM-multi-head attention + tensor network + VQC) for wind forecasting and green hydrogen"),
-        ("hcq-lstm-clqgwo-wind-forecasting", "reimplementation of a physics-informed hybrid classical-quantum LSTM tuned by a chaotic Lévy-flight quantum-inspired grey wolf optimiser")]),
-    ("Metaheuristic hybrids", [
-        ("geoai-hybrid-ga-pso-anfis-wind-forecasting", "GA-PSO-ANFIS-CNN-LSTM hybrid for probabilistic multi-site wind speed forecasting")]),
-    ("Deep learning with attention and gating", [
-        ("cnn-bilstm-attention-synthetic-scada", "CNN-BiLSTM-attention forecasting on synthetic SCADA data, with baselines"),
-        ("cnn-bilstm-attention-real-scada", "CNN-BiLSTM-attention forecasting on wind-turbine SCADA data, with statistical tests"),
-        ("cnn-bilstm-attention-benchmarking-indian-scada", "benchmark of CNN-BiLSTM-attention vs ANN, LSTM, SVM and ARIMA-ANN"),
-        ("xai-shap-lime-cnn-bilstm-attention-wind", "CNN-BiLSTM-attention explained with SHAP, LIME and attention"),
-        ("wind-forecasting-mathematical-formulations-validation", "hybrid deep-learning forecasting with Diebold-Mariano and Ljung-Box validation"),
-        ("wuweidl-daoist-gated-wind-forecasting", "WuWeiDL: Daoist-inspired turbulence-gated attention"),
-        ("rso-net-wind-grid-stabilization", "reimplementation of RSO-Net: TCN-attention probabilistic forecasting with human-approved grid proposals")]),
-    ("IoT and multi-agent systems", [
-        ("iot-n8n-wind-turbine-predictive-maintenance", "wind-turbine predictive maintenance with IoT data, a FastAPI service and an n8n workflow"),
-        ("multi-agent-turbine-fleet-chief-of-staff", "multi-agent AI chief of staff for wind-turbine fleet operations")]),
-    ("Statistical baselines", [
-        ("arima-sarima-wind-speed-chennai", "ARIMA and SARIMA daily wind speed forecasting for Chennai")]),
-]
-GHU = "https://github.com/nishthaakalia/"
-thesis_md = "\n".join(f"- **{g}**\n" + "\n".join(f"  - [{k}]({GHU}{k}): {v}" for k, v in items) for g, items in THESIS)
 DOCS_TOC = [("overview.md", "Overview and quick start"), ("data_card.md", "Dataset and data card"),
             ("dedup_and_splits.md", "Duplicate audit and leakage-aware split"), ("model_and_training.md", "Model and training"),
             ("evaluation_and_calibration.md", "Evaluation and calibration"), ("explainability.md", "Explainability"),
